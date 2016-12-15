@@ -40,3 +40,6 @@ gem 'faraday', '~> 0.9.2'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pry-rails', :group => :development
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'devise_token_auth', '~> 0.1.39'
+gem 'devise'
+gem 'omniauth'

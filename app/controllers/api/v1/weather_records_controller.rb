@@ -1,5 +1,6 @@
 module Api::V1
   class WeatherRecordsController < ApplicationController
+    before_action :doorkeeper_authorize!, only: [:index]
     # GET /api/v1/observations
     def index
 

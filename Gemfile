@@ -44,3 +44,8 @@ gem 'devise_token_auth', '~> 0.1.39'
 gem 'devise'
 gem 'omniauth'
 gem 'doorkeeper'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'factory_girl_rails', '~> 4.8'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+end

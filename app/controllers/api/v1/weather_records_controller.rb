@@ -1,14 +1,16 @@
 module Api::V1
   class WeatherRecordsController < ApplicationController
     before_action :doorkeeper_authorize!, only: [:index]
+
     # GET /api/v1/observations
     def index
-
-      # from = convert(params[:from]) if params[:from].present?
-      # to = convert(params[:to]) if params[:to].present?
-
       from = convert(params[:from]) if limitation_present?(params, :from)
-      to = convert(params[:to]) + 1 if limitation_present?(params, :to)
+
+      to = if limitation_present?(params, :to)
+        # to include values with milliseconds like "2016-12-26 10:00:06.413169"
+        params[:to][-1] = ".999999Z"
+        convert(params[:to])
+      end
 
       @weathers = if from && to
           WeatherRecord.where('created_at >= ? AND created_at <= ?', from, to )

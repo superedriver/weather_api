@@ -12,3 +12,5 @@ before_script:
 script:
   - ENV['RACK_ENV']=test bundle exec rake db:migrate
   - bundle exec rspec spec
+after_success:
+  - bundle exec codeclimate-test-reporter

@@ -1,6 +1,6 @@
 namespace :weather do
-    desc 'Gets '
+    desc 'Writes the current weather'
     task get: :environment do
-      WeatherRecorder.record_weather
+      WeatherRecorder.new.record_weather
     end
 end

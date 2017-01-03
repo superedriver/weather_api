@@ -1,7 +1,7 @@
 class WeatherRecorder
   KELVIN = 273.15
 
-  def self.record_weather
+  def record_weather
     weather = Faraday.new(:url => 'http://api.openweathermap.org') do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT

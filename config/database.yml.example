@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: "username"
+  password: "user_pass"
+  database: weather_dev
+  schema_search_path: public
+  encoding: utf8
+
+test:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: "username"
+  password: "user_pass"
+  database: weather_test
+  schema_search_path: public
+  encoding: utf8
+
+production:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: "username"
+  password: "user_pass"
+  database: weather_prod
+  schema_search_path: public
+  encoding: utf8

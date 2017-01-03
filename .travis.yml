@@ -4,6 +4,8 @@ rvm:
   - 2.3.1
 addons:
   postgresql: "9.5"
+  code_climate:
+    repo_token: 189045fd419c68bc74f87681f2298dc92b051266648101ccda63210e57db43cd
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres

@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/superedriver/weather_api.svg?branch=master)](https://travis-ci.org/superedriver/weather_api)
+[![Code Climate](https://codeclimate.com/github/superedriver/weather_api/badges/gpa.svg)](https://codeclimate.com/github/superedriver/weather_api)
+[![Test Coverage](https://codeclimate.com/github/superedriver/weather_api/badges/coverage.svg)](https://codeclimate.com/github/superedriver/weather_api/coverage)
+
 
 # Weather 
 The simple API for getting the weather in any(Shostka as example) city.

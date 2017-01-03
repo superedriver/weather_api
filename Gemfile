@@ -50,3 +50,8 @@ group :test do
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
   gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
+
+group :test do
+  gem 'simplecov'
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
+end

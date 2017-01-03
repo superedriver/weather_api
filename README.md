@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/superedriver/weather_api.svg?branch=master)](https://travis-ci.org/superedriver/weather_api)
+
 # Weather 
 The simple API for getting the weather in any(Shostka as example) city.
 

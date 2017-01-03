@@ -1,5 +1,8 @@
 require "simplecov"
-SimpleCov.start
+
+SimpleCov.start do
+  add_filter '/config/initializers/'
+end
 
 require 'factory_girl'
 require 'database_cleaner'

@@ -4,7 +4,7 @@ class WeatherRecorder
   def record_weather
     weather = Faraday.new(:url => 'http://api.openweathermap.org') do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
-      faraday.response :logger                  # log requests to STDOUT
+      faraday.response :logger unless Rails.env.test? # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
 

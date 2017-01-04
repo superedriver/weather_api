@@ -131,4 +131,4 @@ rails server
   - **Whenever** - for generating cron job
   - **Faraday** - for making http requests
   - **Dotenv** - for configuring app
-  - **Vcr** - for mocking http requests whole testing
+  - **Vcr** - for mocking http requests while testing

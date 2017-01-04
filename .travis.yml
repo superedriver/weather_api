@@ -14,3 +14,7 @@ script:
   - bundle exec rspec spec
 after_success:
   - bundle exec codeclimate-test-reporter
+deploy:
+  provider: heroku
+  api_key: $HEROKU_STAGING_API_KEY
+  app: weathersms

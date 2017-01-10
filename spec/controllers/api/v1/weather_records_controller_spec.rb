@@ -40,6 +40,12 @@ RSpec.describe Api::V1::WeatherRecordsController, type: :controller do
           data = JSON.parse(response.body)['data']
           expect(data.length).to eq(10)
         end
+
+        it 'with unparsable param' do
+          get :index, params: { from: '2016-01-01T99:99:99Z' }
+          data = JSON.parse(response.body)['data']
+          expect(data.length).to eq(10)
+        end
       end
 
       describe 'Request with TO param' do
@@ -51,6 +57,12 @@ RSpec.describe Api::V1::WeatherRecordsController, type: :controller do
 
         it 'with incorrect param' do
           get :index, params: { to: 'incorrect_param' }
+          data = JSON.parse(response.body)['data']
+          expect(data.length).to eq(10)
+        end
+
+        it 'with unparsable param' do
+          get :index, params: { to: '2016-01-01T99:99:99Z' }
           data = JSON.parse(response.body)['data']
           expect(data.length).to eq(10)
         end

@@ -12,15 +12,9 @@ module Api::V1
         convert(params[:to])
       end
 
-      @weathers = if from && to
-          WeatherRecord.where('created_at >= ? AND created_at <= ?', from, to )
-        elsif from
-          WeatherRecord.where('created_at >= ?', from)
-        elsif to
-          WeatherRecord.where('created_at <= ?', to)
-        else
-          WeatherRecord.all
-        end
+      @weathers = WeatherRecord.all
+      @weathers = @weathers.from_records(from) if from
+      @weathers = @weathers.to_records(to) if to
 
       render json: @weathers
     end

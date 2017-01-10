@@ -25,3 +25,5 @@
 .ruby-version
 .env
 config/database.yml
+
+coverage/
